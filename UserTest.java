@@ -1,3 +1,13 @@
+/*
+* UserTest class created several test users
+* List<User> expected is a list of users which returned by the method getAllUsers()
+* List<User> actual is a list of users which we expect to get
+* Assert.assertEquals(actual, expected) method that testing two lists,
+* comparing all field's objects (if any inheritance - testing inheritance)
+* ***********
+* Test passed successfully.
+*/
+
 package junit;
 
 import java.util.List;
@@ -9,9 +19,9 @@ public class UserTest {
 
     @Test
     public void getAllUsers() {
-        new User("John", 35, Gender.MALE);
-        new User("Mary", 34, Gender.FEMALE);
-        new User("Lisa", 7, Gender.FEMALE);
+        User user = new User("John", 35, Gender.MALE);
+        User user1 = new User("Mary", 34, Gender.FEMALE);
+        User user2 = new User("Lisa", 7, Gender.FEMALE);
 
         // create list expected to fill it with our data
         List<User> expected = User.getAllUsers();
@@ -23,8 +33,7 @@ public class UserTest {
         actual.add(user1);
         actual.add(user2);
 
-        //start the test. If expected и actual will not be equel
-        //test fails and result appear
+        //start the test. If expected and actual will not be equel test fails
         Assert.assertEquals(expected, actual);
     }
 
