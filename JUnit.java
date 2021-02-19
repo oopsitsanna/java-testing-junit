@@ -1,19 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package junit;
 
-/**
- *
- * @author hakin
- */
 public class JUnit {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
     new User("John", 35, Gender.MALE);
     new User("Mary", 34, Gender.FEMALE);
