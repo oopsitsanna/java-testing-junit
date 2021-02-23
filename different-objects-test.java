@@ -6,8 +6,8 @@
 * comparing all field's objects (if any inheritance - testing inheritance)
 */
 
-/* Tests failed because the expected list of users contains more users
-* than in the actual.
+/* Tests failed because the expected list of users contains different users
+* than in the actual list.
 * In main we can check JUnit : main = 1 : 0.
 * */
 package junit;
