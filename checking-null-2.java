@@ -6,9 +6,8 @@
 * comparing all field's objects (if any inheritance - testing inheritance)
 */
 
-/* Tests failed because the expected list of users contains more users
-* than in the actual.
-* In main we can check JUnit : main = 1 : 0.
+/* Tests passed because new modificatin were made in the User class. 
+* Field allUsers initializing expicitly.
 * */
 package junit;
 
