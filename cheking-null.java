@@ -6,19 +6,17 @@
 * comparing all field's objects (if any inheritance - testing inheritance)
 */
 
-/* Tests failed because the expected list of users contains more users
-* than in the actual.
+/* Tests failed because field allUsers was initialized in the constructor. When getAllUsers() was
+*  called there any object has been created. 
+* Next step to remove initialization from the constructor, than create it after field appers.
 * In main we can check JUnit : main = 1 : 0.
 * */
-package junit;
 
+package junit;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.Assert;
 import org.junit.Test;
-
-//import static org.junit.Assert.*;
 
 public class UserTest {
 
