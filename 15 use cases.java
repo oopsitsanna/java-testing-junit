@@ -1,8 +1,30 @@
+// If we invoke Assert.fail(String) test will fail (in case all other methods of the class Assert can't do checking.)
+// For examle, we need to restrict new String(""). We can try to restrict it on the constructor:
+// name = "" || null, age = 0, Gender = null.
+// Tests will fail, because constructor doesn't provided for them.
+// Than we have to change constructor so it can't add users to the list, and users with brocken paramenters.
+// @before annotation means method will be lounched before each testing @Test
+
+// after adding this new construcor to the User class all test will be successful
+/*public User(String name, int age, Gender gender) {
+    if (name != null && !name.isEmpty() && age > 0 && gender != null){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+
+        if (!hasUser()) {
+            countId++;
+            this.id = countId;
+            allUsers.put(id, this);
+        }
+    }
+}*/
+
+
 package junit;
 
 import org.junit.Assert;
 import org.junit.Before;
-//import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -160,4 +182,12 @@ public class UserTest {
             }
         }
     }
+    
+  // to add JUnit 4.12 to the Maven
+ <dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.12</version>
+  <scope>test</scope>
+</dependency>
 }
